@@ -52,7 +52,7 @@ Copy-UserInternationalSettingsToSystem -WelcomeScreen $True -NewUser $True -Verb
 Set-WinLanguageBarOption -UseLegacySwitchMode -UseLegacyLanguageBar
 
 
-# Step 7: Rebooting VM to apply settings
+# Step 7: Removing old language and rebooting VM to apply settings
 Uninstall-Language $oldlanguage -Verbose
 Write-Host -ForegroundColor Green -BackgroundColor Green "The language is now set to: $newlanguage"
 Write-Host -ForegroundColor Green -BackgroundColor Yellow "The VM will be restarted in 30 seconds."
