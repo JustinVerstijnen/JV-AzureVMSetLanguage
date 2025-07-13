@@ -45,6 +45,9 @@ Set-WinHomeLocation -GeoId $geoid
 
 # Step 5: Sets new Timezone
 Set-Timezone -Id $TimeZoneToSet
+$24hclock = Get-UICulture
+($24hclock.DateTimeFormat).ShortTimePattern = 'HH:mm'
+Set-Culture $24hclock
 
 
 # Step 6: Set new language for all current and new users and language bar settings
