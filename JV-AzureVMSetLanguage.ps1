@@ -53,6 +53,7 @@ Set-WinLanguageBarOption -UseLegacySwitchMode -UseLegacyLanguageBar
 
 
 # Step 7: Rebooting VM to apply settings
+Uninstall-Language $oldlanguage -Verbose
 Write-Host -ForegroundColor Green -BackgroundColor Green "The language is now set to: $newlanguage"
 Write-Host -ForegroundColor Green -BackgroundColor Yellow "The VM will be restarted in 30 seconds."
 Start-Sleep -Seconds 30
